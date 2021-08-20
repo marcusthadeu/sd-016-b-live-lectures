@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -16,6 +21,7 @@ p, li {
   font-size: 45px;
   font-weight: 600;
   line-height: 55px;
+  margin-bottom: 30px;
 }
 
 .section-title {
@@ -43,4 +49,21 @@ p, li {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+}
+
+.header {
+  background-image: url("images/smiling-image.jpg");
+  background-size: cover;
+  background-position: 50% 25%;
+  padding: 60px 30px 40px 30px;
+}
+
+.header-content {
+  max-width: 60%;
+  margin-left: 75px;
+}
+
+.header-text {
+  max-width: 80%;
+  text-align: left;
 }
