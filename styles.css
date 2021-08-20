@@ -28,6 +28,7 @@ p, li {
   font-size: 28px;
   font-weight: 600;
   line-height: 42px;
+  margin-bottom: 30px;
 }
 
 .picture {
@@ -66,4 +67,27 @@ p, li {
 .header-text {
   max-width: 80%;
   text-align: left;
+}
+
+.marketing {
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.marketing-text {
+  max-width: 60%;
+  margin: auto;
+}
+
+.student-testemonial {
+  padding: 30px 70px 90px 70px;
+  width: 80%;
+  margin: auto;
+}
+
+.student-container {
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  display: inline;
 }
