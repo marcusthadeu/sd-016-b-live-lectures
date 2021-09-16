@@ -3,35 +3,44 @@
   <head>
     <meta charset='UTF-8'/>
     <title>Talk Form</title>
-    <link rel='stylesheet' href='style.css'/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class='speaker-form-header'>
-      <h1>Speaker Submission</h1>
-      <p><em>Want to speak at our fake conference? Fill out this form?</em></p>
+    <header class="container text-center">
+      <h1 class="display-1">Speaker Submission</h1>
+      <p class="lead"><em>Want to speak at our fake conference? Fill out this form?</em></p>
     </header>
+    
+    <form action="#" method="get" class="container">
+      <div class="container">
 
-    <form action="#" method="get" class="speaker-form">
-      <div class="form-row">
-        <div class="line-content">
-          <label for="full-name">Name</label>
-          <input type="text" id="full-name" name="name" required>
+        <div class="container">
+          <label for="full-name" class="form-label">Name</label>
+          <input class="form-control" type="text" id="full-name" name="name" required>
         </div>
 
-        <div class="line-content">
-          <fieldset class="legacy-form-row">
+        <div class="container">
+          <fieldset>
             <legend>Type of Talk</legend>
-            <input type="radio" name="talk-type" value="main-stage" id="talk-type-1">
-            <label for="talk-type-1">Main Stage</label>
 
-            <input type="radio" name="talk-type" value="workshop" id="talk-type-2" checked>
-            <label for="talk-type-2">Workshop</label>
+            <div class="form-check">
+              <input type="radio" name="talk-type" value="main-stage" id="talk-type-1" class="form-check-input">
+              <label for="talk-type-1" class="form-check-label">Main Stage</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" name="talk-type" value="workshop" id="talk-type-2" checked class="form-check-input">
+              <label for="talk-type-2" class="form-check-label">Workshop</label>
+            </div>
           </fieldset>
         </div>
 
-        <div class="line-content">
-          <label for="t-shirt-size">T-Shirt Size</label>
-          <select name="t-shirt-size" id="t-shirt-size">
+        <div class="container">
+          <label class="form-label" for="t-shirt-size">T-Shirt Size</label>
+          <select class="form-select" name="t-shirt-size" id="t-shirt-size">
             <option value="xs">Extra Small</option>
             <option value="s">Small</option>
             <option value="m" selected>Medium</option>
@@ -40,21 +49,50 @@
           </select>
         </div>
 
-        <div class="line-content">
-          <label for="abstract">Abstract</label>
-          <textarea name="abstract" id="abstract" cols="70" rows="20" placeholder="place" style="resize: none; display: block;" maxlength="10"></textarea>
+        <div class="container">
+          <label class="form-label" for="abstract">Abstract</label>
+          <textarea class="form-control" name="abstract" id="abstract" cols="70" rows="20" placeholder="place" maxlength="10"></textarea>
         </div>
 
-        <div class="line-content">
-          <label for="available">I'm available for this talk</label>
-          <input type="checkbox" name="available" id="available">
+        <div class="container">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="available" id="available">
+            <label class="form-check-label" for="available">I'm available for this talk</label>
+          </div>
         </div>
 
-        <div class="line-content">
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
+        <div class="container">
+          <button class="btn btn-success" type="submit">Submit</button>
+          <button class="btn btn-danger" type="reset">Reset</button>
+          <button type="button" class="btn btn-primary" id="buttonModal">
+            Abre a janela modal!
+          </button>
         </div>
       </div>
     </form>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Curso</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Trybe!!!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
